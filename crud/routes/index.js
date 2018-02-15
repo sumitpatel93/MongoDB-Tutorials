@@ -12,6 +12,19 @@ router.get('/', function(req, res) {
     res.render('index', { title: 'Express' });
 });
 
+router.post('/insert',function(req,res,next){
+    MongoClient.connect(url, function(err,db){
+        if (err) throw  err;
+        var dbo =  db.db('mydb');
+        
+        var product = { name : req.body.name, address:req.body.address};
+        dbo.collection('customers').insert(product,function(err,result){
+            db.close();
+            res.redirect('/');
+        });
+    })
+});
+
 
 router.get('/get-data', function(req, res, next) {
 
