@@ -13,18 +13,21 @@ router.get('/', function(req, res) {
 });
 
 
-router.get('/get-data', function(req, res, next) 
-{
+router.get('/get-data', function(req, res, next) {
 
-    MongoClient.connect(url,function(err,db){
-        assert.equal(null,err);
-        console.log('connected');
-        if (err) throw err; 
-        res.render('index')
-        db.close();
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        
+        var dbo = db.db('mydb');
+        dbo.collection('customers').find({}).toArray(function(err, result) {
+            if (err) throw err;
+            res.render('index',{data:result});
+            console.log(result);
+
+            db.close();
+        })
+
     });
-    
-    
 });
 
 
