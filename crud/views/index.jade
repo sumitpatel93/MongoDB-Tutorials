@@ -1,0 +1,29 @@
+doctype html
+html
+  body
+    form(action='/insert', method='post')
+      | First name:
+      br
+      |   
+      input#name(type='text', name='name')
+      |   
+      br
+      |   Last name:
+      br
+      |   
+      input#address(type='text', name='address')
+      |   
+      br
+      br
+      |   
+      input(type='submit', value='Submit')
+    |  
+    p
+      | If you click the &quot;Submit&quot; button, the form-data will be sent to a page called &quot;/action_page.php&quot;.
+    
+ 
+
+    a(href='/get-data') LOAD DATA
+    h1 SHOW DATA    
+   
+    
