@@ -1,6 +1,8 @@
 doctype html
 html
   body
+  
+    h1 Submit Data
     form(action='/insert', method='post')
       | First name:
       br
@@ -20,14 +22,59 @@ html
     |  
     p
       | If you click the &quot;Submit&quot; button, the form-data will be sent to a page called &quot;/action_page.php&quot;.
-    
+  
  
     a(href='/get-data') LOAD DATA
-    h1 SHOW DATA  
+    h1 Show Data
 
-   
     
-     
     
-   
+    h1 Delete Data
+
+    form(action='/delete', method='post')
+      | First name:
+      br
+      |   
+      input#name(type='text', name='name')
+      |   
+      br
+      |   Last name:
+      br
+      |   
+      input#address(type='text', name='address')
+      |   
+      br
+      |   Id:
+      br
+      |   
+      input#id(type='number', name='id')
+      |   
+      br
+      br
+      |   
+      input(type='submit', value='delete')
     
+    h1 Update Data
+
+    form(action='/update', method='post')
+      | First name:
+      br
+      |   
+      input#name(type='text', name='name')
+      |   
+      br
+      |   Last name:
+      br
+      |   
+      input#address(type='text', name='address')
+      |   
+      br
+      |   Id:
+      br
+      |   
+      input#id(type='number', name='id')
+      |   
+      br
+      br
+      |   
+      input(type='submit', value='update')
