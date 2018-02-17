@@ -12,8 +12,18 @@ router.get('/', function(req, res) {
 });
 
 router.post('/delete', function(req, res) {
-  res.send('Hi');
-  res.end();
+  var id = req.body.id;
+  MongoClient.connect(url,function(err,db){
+    assert.equal(null,err);
+    var dbo = db.db('mydb');
+
+    dbo.collection('customers').deleteOne({'_id':objectId(id)},function(err,result){
+        assert.equal(null,err);
+        console.log('item  deleted');
+        db.close();
+        res.redirect('/');
+    });
+  });
 });
 
 
