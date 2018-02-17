@@ -30,26 +30,13 @@ html
     
     
     h1 Delete Data
-
+    
     form(action='/delete', method='post')
-      | First name:
-      br
-      |   
-      input#name(type='text', name='name')
-      |   
-      br
-      |   Last name:
-      br
-      |   
-      input#address(type='text', name='address')
-      |   
-      br
       |   Id:
       br
       |   
       input#id(type='number', name='id')
       |   
-      br
       br
       |   
       input(type='submit', value='delete')
@@ -63,7 +50,7 @@ html
       input#name(type='text', name='name')
       |   
       br
-      |   Last name:
+      |   Address:
       br
       |   
       input#address(type='text', name='address')
@@ -72,7 +59,7 @@ html
       |   Id:
       br
       |   
-      input#id(type='number', name='id')
+      input#id(type='text', name='id')
       |   
       br
       br
