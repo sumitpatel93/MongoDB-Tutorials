@@ -3,3 +3,6 @@ Loadtest can be easily performed with the LOADTEST module from npm
 2 - loadtest -c 10 --rps 200 http://localhost:3000/get-data
 
 This will start the loadtest with the concurrency of 10 and request per second is 200.
+
+
+![loadtest](https://user-images.githubusercontent.com/15656052/36355789-a232c2e2-150e-11e8-9036-644642003953.png)
