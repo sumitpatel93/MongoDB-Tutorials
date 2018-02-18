@@ -1,0 +1,5 @@
+Loadtest can be easily performed with the LOADTEST module from npm
+1 - sudo npm install -g loadtest
+2 - loadtest -c 10 --rps 200 http://localhost:3000/get-data
+
+This will start the loadtest with the concurrency of 10 and request per second is 200.
