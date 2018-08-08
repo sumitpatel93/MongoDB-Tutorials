@@ -1,0 +1,33 @@
+mongodb helpline
+
+
+1 - install the mongo db in ubutnu
+
+    #sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+     # echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+    #sudo apt-get update
+    #apt-get install mongodb-10gen = 2.2.3
+    #mongo
+        this will start the service
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                  Mongo cheat sheet
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1 - mongo 
+      This will start the mongo service in the terminal
+2 - show dbs
+        will list the totals dbs in the folder
+
+3 - use <collectionName>
+        will switch to the collection name
+
+4 - db.<collectionName>.insert({"name":"tutorials point"})
+
+5 - db.<collectionName>.find()
+
+6 -  show collections
+
+References
+https://blog.codecentric.de/files/2012/12/MongoDB-CheatSheet-v1_0.pdf
